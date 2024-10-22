@@ -1,0 +1,75 @@
+baseURL: "https://drkarlzhou.github.io/"
+title: Karl Zhou Blog
+theme: PaperMod
+
+params:
+  title: "Karl Zhou's blog" # 首页标题
+  description: "personal learning and thoughts" # 页面描述
+  keywords: [Blog, AI] # 首页的关键词
+  author: Karl Zhou # 文章中默认显示的作者名字
+  DateFormat: "2006-01-02" # 将时间格式修改为国内常用格式
+  ShowCodeCopyButtons: true # 显示复制代码按钮
+  showtoc: true # 在每篇文章开头显示目录
+  
+  # PaperMod支持Regular、Home-Info和Profile三种模式，具体参阅 https://github.com/adityatelange/hugo-PaperMod/wiki/Features#regular-mode-default-mode
+  profileMode: 
+    enabled: false # needs to be explicitly set
+    title: "Karl Zhou's blog"
+    subtitle: "This is subtitle"
+    imageUrl: "<img location>"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+  homeInfoParams:
+    Title: "Welcome to Karl Zhou's Blog"
+    Content: Hi, this is Karl Zhou. I’m documenting my learning notes in this blog. 
+    
+  socialIcons:
+    - name: github
+      url: "https://github.com/DrZhouKarl" # 个人Github地址
+    - name: email
+      url: "mailto://drzhoulongfei@126.com" # 个人邮箱
+
+  editPost:
+    URL: "https://github.com/DrZhouKarl/DrZhouKarl.github.io/blob/main/content" # 填入Github仓库的地址
+    Text: "提交修改建议"
+    appendFilePath: true # 是否在URL后加入文件路径
+ 
+ # 网站右上角的菜单列表
+menu:
+  main:
+    - identifier: posts # 需做额外配置，具体参考下文
+      name: Posts
+      url: /posts/
+      weight: 5
+      
+    - identifier: archives # 需做额外配置，具体参考下文
+      name: Archive
+      url: /archives/
+      weight: 10
+      
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 20
+      
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 30
+      
+    - identifier: search # 需做额外配置，具体参考下文
+      name: Search
+      url: /search/
+      weight: 40
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
